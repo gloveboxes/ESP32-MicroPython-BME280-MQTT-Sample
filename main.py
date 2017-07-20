@@ -17,6 +17,14 @@ pin5 = machine.Pin(5, machine.Pin.OUT)
 i2c = machine.I2C(scl=machine.Pin(22), sda=machine.Pin(21))
 bme = bme280.BME280(i2c=i2c)
 
+def initialise():
+    blinkcnt = 0
+    checkwifi()
+    while blinkcnt < 50:
+        pin5.value(blinkcnt % 2)
+        blinkcnt = blinkcnt + 1
+        time.sleep_ms(100)
+
 def checkwifi():
     while not sta_if.isconnected():
         time.sleep_ms(500)
@@ -33,7 +41,9 @@ def publish():
         client.publish(b"home/weather", msg)
         pin5.value(1)
         count = count + 1
-        time.sleep(20)
+        time.sleep(5)
+
+initialise()
 
 client.reconnect()
 

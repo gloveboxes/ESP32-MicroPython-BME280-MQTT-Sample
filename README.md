@@ -22,6 +22,7 @@
 * [Hackster MicroPython Mqtt Project](https://www.hackster.io/bucknalla/mqtt-micropython-044e77)
 * [Espressif esptool](https://github.com/espressif/esptool)
 * [Mosquitto Broker](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04)
+* [PuTTY](http://www.putty.org/)
 
 ## ESP32 MicroPython Firmware Flashing Process
 
