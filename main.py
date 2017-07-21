@@ -11,7 +11,7 @@ import bme280
 # sta_if.active(True)
 # sta_if.connect("NCW", "malolos5459")
 
-#upip packages
+#upip packages - see README.md
 # upip.install('micropython-umqtt.simple')
 # upip.install('micropython-umqtt.robust')
 
