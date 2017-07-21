@@ -23,6 +23,7 @@
 * [Espressif esptool](https://github.com/espressif/esptool)
 * [Mosquitto Broker](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-ubuntu-16-04)
 * [PuTTY](http://www.putty.org/)
+* [Serial Support on the Windows Subsystem for Linux]https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/()
 
 ## ESP32 MicroPython Firmware Flashing Process
 
