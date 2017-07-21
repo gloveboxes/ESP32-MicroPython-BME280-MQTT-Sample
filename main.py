@@ -11,6 +11,10 @@ import bme280
 # sta_if.active(True)
 # sta_if.connect("NCW", "malolos5459")
 
+#upip packages
+# upip.install('micropython-umqtt.simple')
+# upip.install('micropython-umqtt.robust')
+
 client = MQTTClient("esp32-01", "192.168.1.122")
 pin5 = machine.Pin(5, machine.Pin.OUT)
 
@@ -26,10 +30,11 @@ def initialise():
         time.sleep_ms(100)
 
 def checkwifi():
+    blinkcnt = 0
     while not sta_if.isconnected():
         time.sleep_ms(500)
-        print(".")
-        sta_if.connect()
+        pin5.value(blinkcnt % 2)
+        blinkcnt = blinkcnt + 1
 
 def publish():
     count = 1
